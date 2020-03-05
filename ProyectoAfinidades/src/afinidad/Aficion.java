@@ -1,4 +1,4 @@
-package Afinidad;
+package afinidad;
 
 public class Aficion {
 	

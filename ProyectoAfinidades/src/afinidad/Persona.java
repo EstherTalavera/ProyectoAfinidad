@@ -1,4 +1,4 @@
-package Afinidad;
+package afinidad;
 
 import java.util.Scanner;
 
@@ -146,13 +146,22 @@ public class Persona {
 		return this.aficiones;
 	}
 	
-	public static void main(String[] args) {
-		//Array que contiene las personas
-		Persona[] personas = new Persona[10];
-		
+	/**
+	 * 
+	 * @param personas Array de personas
+	 * 
+	 */
+	public static void rellenarArrayPersonas (Persona personas[]) {
 		for (int i = 0; i < personas.length; i++) {
 			personas[i] = new Persona();
 		}
+	}
+	
+	public static void main(String[] args) {
+		//Array que contiene las personas
+		Persona[] personas = new Persona[3];
+		
+		Persona.rellenarArrayPersonas(personas);
 		
 		//Array que contiene las aficiones disponibles para elegir
 		Aficion[] aficiones = new Aficion[7];
