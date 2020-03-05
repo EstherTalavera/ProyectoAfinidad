@@ -146,31 +146,27 @@ public class Persona {
 		return this.aficiones;
 	}
 	
-	/**
-	 * 
-	 * @param personas Array de personas
-	 * 
-	 */
-	public static void rellenarArrayPersonas (Persona personas[]) {
-		for (int i = 0; i < personas.length; i++) {
-			personas[i] = new Persona();
+	public static void rellenarAficiones (Aficion[] aficiones, String[] nombreAficiones) {
+		for (int i = 0; i < 7; i++) {
+			Aficion a = new Aficion(i+1, nombreAficiones[i]);
+			aficiones[i] = a;
 		}
 	}
 	
 	public static void main(String[] args) {
 		//Array que contiene las personas
 		Persona[] personas = new Persona[10];
+		for (int i = 0; i < personas.length; i++) {
+			personas[i] = new Persona();
+		}
 		
-		Persona.rellenarArrayPersonas(personas);
 		
 		//Array que contiene las aficiones disponibles para elegir
 		Aficion[] aficiones = new Aficion[7];
 		String[] nombreAficiones = {"Futbol", "Baloncesto", "Tenis", 
-				"Formula 1", "Badminton", "Ajedrez", "Astrologia"};		
-		for (int i = 0; i < 7; i++) {
-			Aficion a = new Aficion(i+1, nombreAficiones[i]);
-			aficiones[i] = a;
-		}
+				"Formula 1", "Badminton", "Ajedrez", "Astrologia"};
+		
+		Persona.rellenarAficiones(aficiones, nombreAficiones);
 		
 		//For para pedir por pantalla los datos de las personas
 		for (int i = 0; i < personas.length; i++) {
