@@ -159,7 +159,7 @@ public class Persona {
 	
 	public static void main(String[] args) {
 		//Array que contiene las personas
-		Persona[] personas = new Persona[3];
+		Persona[] personas = new Persona[10];
 		
 		Persona.rellenarArrayPersonas(personas);
 		
